@@ -1,0 +1,32 @@
+$bg-color:tomato;
+.main-header{
+    background-color: $bg-color;
+    transition: width 2s, height 4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    &:hover{
+        width: auto;
+        height: 100vh;
+    }
+    h1{
+        color: #ffffff;
+        font-size: 40px;
+        cursor: pointer;
+        &:hover{
+            transform: rotateY(360deg);
+            transition:1.5s;
+        }
+    }
+    p{
+        color: cornsilk;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover{
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+    }
+}
