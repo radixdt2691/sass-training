@@ -1,0 +1,131 @@
+@use "variable" as v;
+@use "sass:list";
+v.$txt-clr:aqua;
+
+$list1:(1,2,3,4);
+$ls:("1,2,3,4");
+@debug(length($ls));
+$list2:(6 7 8 9 10);
+$list1:append($list1 , 5 , $separator: space);
+$list3: join($list1 , ($list2 ,11,12) , $separator: space);
+//length of string
+@debug(length($list1));
+
+//returns particular value
+@debug(nth($list3,6));
+
+@debug($list1);
+@debug($list2);
+@debug($list3);
+@debug($list1);
+@debug(toString(nth($list3,6)));
+//getting index of particular value
+@debug(index($list3,1));
+@function pow($base, $exponent) {
+    $result: 1;
+    $i:1;
+    @for $i from $i through $exponent {
+      $result: $result * $base;
+      $i:$i+1;
+    }
+    @return $result;
+}
+  
+@mixin heading-2($color,$fs:40px){
+    font-size: $fs;
+    color:$color;
+    text-align: center;
+   
+}
+h2{
+   @include heading-2(v.$txt-clr)
+}
+
+@mixin bg-color{
+    background-color: rgb(243, 118, 96);
+}
+
+@mixin emoji($size,$icons:true){
+    font-size: $size;
+    @if $icons {
+        border: 1px solid white;
+        margin: 10px;
+        border-radius:20%;
+    }
+}
+//Passing variables to mixin
+@mixin  bordered($color,$width) {
+    border: $width solid $color;
+}
+@mixin header-sec{
+    @include bg-color;
+    @include bordered(black,1px);
+    color: #FFFFFF;
+    max-width: 100%;
+    height: 80vh;
+    border-radius: 15px;
+    position: relative;
+}
+@mixin btn($padding,$color,$background){
+    padding: $padding;
+    color: $color;
+    background: $background;
+}
+@mixin btn-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.header{
+    @include header-sec;
+    margin-top: 75px;
+    padding: 20px;
+    h1{
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        margin-left: pow(3, 4) * 1px;
+    }
+    p{
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .mt-20{
+        margin-top: -100px;
+    }
+    .btn-all{
+        @include btn-div;
+    }
+    .btn , .btn-1{
+        @include btn(20px 40px,white,black);
+        margin-top: 20px;
+        border: 0;
+        &:hover{
+            background-color: #FFFFFF;
+            color: black;
+            cursor: pointer;
+        }
+    }
+    .icon-eye, .icon-start, .icon-end{
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        &:hover{
+            transform: rotateY(360deg);
+            transition:3.5s;
+        }
+    }
+    $icons: ("eye": "😃", "start": "😁 ", "end": "😎");
+
+    @each $name, $glyph in $icons {
+    .icon-#{$name}:before {
+        display: inline-block;
+        font-family: "Icon Font";
+        content: $glyph;
+        @include emoji(30px);
+    }
+    }           
+}
+    
+    

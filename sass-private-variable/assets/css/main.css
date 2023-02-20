@@ -1,0 +1,87 @@
+@charset "UTF-8";
+h2 {
+  font-size: 40px;
+  color: aqua;
+  text-align: center;
+}
+
+.header {
+  background-color: rgb(243, 118, 96);
+  border: 1px solid black;
+  color: #FFFFFF;
+  max-width: 100%;
+  height: 80vh;
+  border-radius: 15px;
+  position: relative;
+  margin-top: 75px;
+  padding: 20px;
+}
+.header h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 81px;
+}
+.header p {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header .mt-20 {
+  margin-top: -100px;
+}
+.header .btn-all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .btn, .header .btn-1 {
+  padding: 20px 40px;
+  color: white;
+  background: black;
+  margin-top: 20px;
+  border: 0;
+}
+.header .btn:hover, .header .btn-1:hover {
+  background-color: #FFFFFF;
+  color: black;
+  cursor: pointer;
+}
+.header .icon-eye, .header .icon-start, .header .icon-end {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.header .icon-eye:hover, .header .icon-start:hover, .header .icon-end:hover {
+  transform: rotateY(360deg);
+  transition: 3.5s;
+}
+.header .icon-eye:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "😃";
+  font-size: 30px;
+  border: 1px solid white;
+  margin: 10px;
+  border-radius: 20%;
+}
+.header .icon-start:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "😁 ";
+  font-size: 30px;
+  border: 1px solid white;
+  margin: 10px;
+  border-radius: 20%;
+}
+.header .icon-end:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "😎";
+  font-size: 30px;
+  border: 1px solid white;
+  margin: 10px;
+  border-radius: 20%;
+}
+
+/*# sourceMappingURL=main.css.map */
