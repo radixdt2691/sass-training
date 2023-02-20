@@ -1,6 +1,12 @@
 @use "variable" as v;
 @use "sass:list";
+@use "sass:string";
 v.$txt-clr:aqua;
+
+// list debug start
+@debug("------------------------------------------");
+@debug("List Debug start");
+@debug("-----------------------------------------");
 
 $list1:(1,2,3,4);
 $ls:("1,2,3,4");
@@ -19,8 +25,30 @@ $list3: join($list1 , ($list2 ,11,12) , $separator: space);
 @debug($list3);
 @debug($list1);
 @debug(toString(nth($list3,6)));
+
 //getting index of particular value
 @debug(index($list3,1));
+
+// list debug end
+@debug("-----------------------------------------");
+@debug("List Debug End");
+
+@debug("------------------------------------------");
+@debug("String Debug Start");
+@debug("------------------------------------------");
+
+$str:"Hello world";
+@debug(type-of($str));
+@debug(string.unquote($str));
+@debug(str-length($str));
+@debug(str-index($str, "world"));
+@debug(str-insert($str, " Hola", $index: -1));
+@debug(str-slice($str, 1, 4));
+@debug("-----------------------------------------");
+@debug("String Debug End");
+@debug("------------------------------------------");
+
+
 @function pow($base, $exponent) {
     $result: 1;
     $i:1;
