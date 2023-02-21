@@ -1,0 +1,304 @@
+@use "mixin" as m;
+//Reset CSS
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, tt, u, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+    display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+// ol, ul{
+//     list-style: none;
+// }
+
+blockquote, q{
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content: none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input{
+    border-radius: 0;
+}
+
+//main scss
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*---------------------------Header CSS Start --------------------------*/
+.main-nav{
+    width: 100%;
+    // position: fixed;
+   
+    .navbar-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #check1 {
+            display: none;
+        }
+        .checkbtn1{
+            display: none;
+        }
+       
+    }
+    .col-2{
+       width: 20%;
+       padding: 7px 0px;
+    }
+
+    .col-8{
+        width: 80%;
+        padding: 7px 0px;
+    }
+    
+    .nav-flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+
+        .active{
+            text-decoration-line: underline;
+            color: #FF0000;
+        }
+
+        li a{
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Arial';
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #000000;
+
+            &:hover{
+                color: red;
+                text-decoration: underline;
+            }
+
+
+        }
+    }
+    .col-5{
+        width: 50%;
+    }
+    .search-input{
+        position: relative;
+    }
+    .plc-src{
+        padding: 10px;
+        border: 1px solid #555555;
+        border-radius: 20px;
+        font-size: 16px;
+        line-height: 16px;
+        color:#555555;
+        width: 100%;
+    }
+    .icon{
+        position: absolute;
+        right: 20px;
+        bottom: 13px;
+        color: #6C757D;
+    }
+
+    //Responsive
+    @include m.lg();
+}
+/*---------------------------Header CSS End --------------------------*/
+
+/*---------------------------Banner CSS Start --------------------------*/
+.banner-sec{
+    background-color: #EAEAEA;
+    padding: 100px 120px;
+
+
+    .txt-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        .col-8{
+            width: 66.66%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .txt{
+            h2{
+                font-family: 'Arial';
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 40px;
+                color: #FF0000;
+            }
+            p{
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 40px;
+                color: #414141;
+                margin-top: 40px;
+            }
+        }
+        .img-n{
+            width: 100%;
+            height: auto;
+        }
+        .col-4{
+            width: 33.33%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+    }
+     //Responsive
+     @include m.bs();
+}
+/*---------------------------Banner CSS End --------------------------*/
+
+/*---------------------------Card-section CSS Start --------------------------*/
+.card-sec{
+    margin-top: 100px;
+ 
+    h3{
+        font-family: 'Arial';
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FF0000;
+        margin-bottom: 30px;
+    }
+    
+    .d-flex{
+        display: flex;
+    }
+    .col-3{
+        width: calc(100%/3);
+        padding: 30px 14px;
+
+        .card-in-1{
+            background: #FFFFFF;
+            border: 1px solid #FF0000;
+            box-shadow: 0px 4px 20px rgba(175, 175, 175, 0.1);
+            border-radius: 20px;
+            // width: 570px;
+            // height: 313px;
+
+            .inner-list{
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                color: #FF0000;
+                margin-top: 57px;
+            }
+            .inner-list-1{
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 30px;
+                color: #414141;
+                padding: 20px;
+               
+            }
+        }
+        .card-in-2{
+            border: 1px solid #3092F9;
+        }
+        .card-in-3{
+            border: 1px solid #FBA333;
+        }
+    }
+      //Responsive
+      @include m.cs();
+}
+/*---------------------------Card-section CSS End --------------------------*/
+
+/*---------------------------img-txt section CSS Start --------------------------*/
+.img-content{
+    h3{
+        font-family: "Arial";
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FF0000;
+        margin-bottom: 30px;
+    
+    }
+   .row{
+    display: flex;
+    flex-wrap: wrap;
+    .col-6{
+        width: 50%;
+        img{
+            display: block;
+            width: 100%;
+        }
+        .img-txt{
+            padding: 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #EAEAEA;
+            h3{
+                
+                font-family: 'Arial';
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 30px;
+                color: #3092F9;
+                text-align: left;
+            }
+            p{
+                font-family: 'Arial';
+                font-size: 18px;
+                line-height: 30px;
+                color: #000000;
+            }
+            .btn{
+                button{
+                    background: #000000;border: 1px solid #CFCFCF;color:white;cursor: pointer;padding: 10px;
+                }
+            }
+        }
+    }
+   }
+}
+/*---------------------------img-txt section CSS End --------------------------*/

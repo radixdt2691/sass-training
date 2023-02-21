@@ -1,0 +1,382 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, tt, u, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*---------------------------Header CSS Start --------------------------*/
+.main-nav {
+  width: 100%;
+}
+.main-nav .navbar-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav .navbar-main #check1 {
+  display: none;
+}
+.main-nav .navbar-main .checkbtn1 {
+  display: none;
+}
+.main-nav .col-2 {
+  width: 20%;
+  padding: 7px 0px;
+}
+.main-nav .col-8 {
+  width: 80%;
+  padding: 7px 0px;
+}
+.main-nav .nav-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.main-nav .nav-flex .active {
+  text-decoration-line: underline;
+  color: #FF0000;
+}
+.main-nav .nav-flex li a {
+  list-style: none;
+  text-decoration: none;
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.main-nav .nav-flex li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+.main-nav .col-5 {
+  width: 50%;
+}
+.main-nav .search-input {
+  position: relative;
+}
+.main-nav .plc-src {
+  padding: 10px;
+  border: 1px solid #555555;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #555555;
+  width: 100%;
+}
+.main-nav .icon {
+  position: absolute;
+  right: 20px;
+  bottom: 13px;
+  color: #6C757D;
+}
+@media (max-width: 992px) {
+  .main-nav .fa-btn {
+    z-index: 99;
+  }
+  .main-nav .navbar, .main-nav .topnav, .main-nav .nav-link {
+    font-size: 50px;
+  }
+  .main-nav .navbar-main .checkbtn1 {
+    display: block;
+    z-index: 99;
+    font-size: larger;
+  }
+  .main-nav .topnav {
+    position: fixed;
+    height: 350px;
+    width: 100%;
+    background-color: rgba(224, 228, 233, 0.73);
+    top: 0;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 99;
+  }
+  .main-nav .topnav li {
+    padding: 20px;
+  }
+  .main-nav .navbar, .main-nav .topnav, .main-nav .link {
+    display: block;
+    margin: 0 auto;
+    color: #292929;
+    z-index: 9;
+    cursor: pointer;
+  }
+  .main-nav .fa.fa-bars {
+    font-size: 31px;
+    padding: 18px;
+    color: #e84545;
+  }
+  .main-nav .navbar .topnav, .main-nav .link {
+    font-size: 20px;
+    color: #292929;
+  }
+  .main-nav .navbar {
+    transition: 0.5s;
+  }
+  .main-nav #check1:checked ~ .topnav {
+    right: 0;
+  }
+}
+
+/*---------------------------Header CSS End --------------------------*/
+/*---------------------------Banner CSS Start --------------------------*/
+.banner-sec {
+  background-color: #EAEAEA;
+  padding: 100px 120px;
+}
+.banner-sec .txt-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.banner-sec .txt-img .col-8 {
+  width: 66.66%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.banner-sec .txt-img .txt h2 {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 40px;
+  color: #FF0000;
+}
+.banner-sec .txt-img .txt p {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: #414141;
+  margin-top: 40px;
+}
+.banner-sec .txt-img .img-n {
+  width: 100%;
+  height: auto;
+}
+.banner-sec .txt-img .col-4 {
+  width: 33.33%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (max-width: 992px) {
+  .banner-sec .txt-img .col-8 {
+    width: 50%;
+  }
+  .banner-sec .txt-img .col-4 {
+    width: 50%;
+  }
+  .banner-sec .txt-img .txt h2 {
+    font-size: 35px;
+  }
+  .banner-sec .txt-img .txt p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-sec .txt-img {
+    flex-direction: column-reverse;
+  }
+  .banner-sec .txt-img .col-8 {
+    width: 100%;
+  }
+  .banner-sec .txt-img .col-4 {
+    width: 100%;
+  }
+  .banner-sec .txt-img .col-4 .img-n {
+    margin-bottom: 20px;
+  }
+  .banner-sec .txt-img .txt p {
+    font-size: 15px;
+    line-height: 34px;
+  }
+}
+@media (max-width: 576px) {
+  .banner-sec {
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .banner-sec {
+    padding: unset;
+  }
+}
+
+/*---------------------------Banner CSS End --------------------------*/
+/*---------------------------Card-section CSS Start --------------------------*/
+.card-sec {
+  margin-top: 100px;
+}
+.card-sec h3 {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FF0000;
+  margin-bottom: 30px;
+}
+.card-sec .d-flex {
+  display: flex;
+}
+.card-sec .col-3 {
+  width: 33.3333333333%;
+  padding: 30px 14px;
+}
+.card-sec .col-3 .card-in-1 {
+  background: #FFFFFF;
+  border: 1px solid #FF0000;
+  box-shadow: 0px 4px 20px rgba(175, 175, 175, 0.1);
+  border-radius: 20px;
+}
+.card-sec .col-3 .card-in-1 .inner-list {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FF0000;
+  margin-top: 57px;
+}
+.card-sec .col-3 .card-in-1 .inner-list-1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #414141;
+  padding: 20px;
+}
+.card-sec .col-3 .card-in-2 {
+  border: 1px solid #3092F9;
+}
+.card-sec .col-3 .card-in-3 {
+  border: 1px solid #FBA333;
+}
+@media (max-width: 1200px) {
+  .card-sec .col-3 .card-in-1 .inner-list-1 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .card-sec .d-flex {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-sec .col-3 {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .card-sec .col-3 .card-in-1 .inner-list-1 {
+    font-size: 12px;
+  }
+}
+
+/*---------------------------Card-section CSS End --------------------------*/
+/*---------------------------img-txt section CSS Start --------------------------*/
+.img-content h3 {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FF0000;
+  margin-bottom: 30px;
+}
+.img-content .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-content .row .col-6 {
+  width: 50%;
+}
+.img-content .row .col-6 img {
+  display: block;
+  width: 100%;
+}
+.img-content .row .col-6 .img-txt {
+  padding: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #EAEAEA;
+}
+.img-content .row .col-6 .img-txt h3 {
+  font-family: "Arial";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 30px;
+  color: #3092F9;
+  text-align: left;
+}
+.img-content .row .col-6 .img-txt p {
+  font-family: "Arial";
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+.img-content .row .col-6 .img-txt .btn button {
+  background: #000000;
+  border: 1px solid #CFCFCF;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/*---------------------------img-txt section CSS End --------------------------*/
+
+/*# sourceMappingURL=main.css.map */
