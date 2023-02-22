@@ -20,6 +20,7 @@ footer, header, nav, section, main {
 
 body {
   line-height: 1;
+  font-family: "Arial";
 }
 
 blockquote, q {
@@ -36,16 +37,38 @@ table {
   border-spacing: 0;
 }
 
-input {
-  border-radius: 0;
-}
-
 .container {
   max-width: 1320px;
   margin: 0 auto;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.txt-deco, .main-nav .nav-flex li a:hover, .main-nav .nav-flex .active {
+  text-decoration: underline;
+}
+
+.col-2 {
+  width: 20%;
+  padding: 7px 0px;
+}
+
+.col-8 {
+  width: 80%;
+  padding: 7px 0px;
+}
+
+.col-5 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-4 {
+  width: 33.33%;
 }
 
 /*---------------------------Header CSS Start --------------------------*/
@@ -63,13 +86,29 @@ input {
 .main-nav .navbar-main .checkbtn1 {
   display: none;
 }
-.main-nav .col-2 {
-  width: 20%;
-  padding: 7px 0px;
+@media (max-width: 992px) {
+  .main-nav .navbar-main .checkbtn1 {
+    display: block;
+    z-index: 99;
+    font-size: larger;
+  }
 }
-.main-nav .col-8 {
-  width: 80%;
-  padding: 7px 0px;
+@media (max-width: 992px) {
+  .main-nav .navbar-main .fa-btn {
+    z-index: 99;
+  }
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-main .fa.fa-bars {
+    font-size: 31px;
+    padding: 18px;
+    color: #e84545;
+  }
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-main {
+    transition: 0.5s;
+  }
 }
 .main-nav .nav-flex {
   display: flex;
@@ -77,9 +116,30 @@ input {
   justify-content: space-evenly;
   list-style: none;
 }
+@media (max-width: 992px) {
+  .main-nav .nav-flex {
+    position: fixed;
+    height: 350px;
+    width: 100%;
+    background-color: rgba(224, 228, 233, 0.73);
+    top: 0;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 99;
+    display: block;
+    margin: 0 auto;
+    z-index: 9;
+    cursor: pointer;
+  }
+}
 .main-nav .nav-flex .active {
-  text-decoration-line: underline;
   color: #FF0000;
+}
+@media (max-width: 992px) {
+  .main-nav .nav-flex li {
+    padding: 20px;
+  }
 }
 .main-nav .nav-flex li a {
   list-style: none;
@@ -92,10 +152,6 @@ input {
 }
 .main-nav .nav-flex li a:hover {
   color: red;
-  text-decoration: underline;
-}
-.main-nav .col-5 {
-  width: 50%;
 }
 .main-nav .search-input {
   position: relative;
@@ -116,50 +172,6 @@ input {
   color: #6C757D;
 }
 @media (max-width: 992px) {
-  .main-nav .fa-btn {
-    z-index: 99;
-  }
-  .main-nav .navbar, .main-nav .topnav, .main-nav .nav-link {
-    font-size: 50px;
-  }
-  .main-nav .navbar-main .checkbtn1 {
-    display: block;
-    z-index: 99;
-    font-size: larger;
-  }
-  .main-nav .topnav {
-    position: fixed;
-    height: 350px;
-    width: 100%;
-    background-color: rgba(224, 228, 233, 0.73);
-    top: 0;
-    right: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 99;
-  }
-  .main-nav .topnav li {
-    padding: 20px;
-  }
-  .main-nav .navbar, .main-nav .topnav, .main-nav .link {
-    display: block;
-    margin: 0 auto;
-    color: #292929;
-    z-index: 9;
-    cursor: pointer;
-  }
-  .main-nav .fa.fa-bars {
-    font-size: 31px;
-    padding: 18px;
-    color: #e84545;
-  }
-  .main-nav .navbar .topnav, .main-nav .link {
-    font-size: 20px;
-    color: #292929;
-  }
-  .main-nav .navbar {
-    transition: 0.5s;
-  }
   .main-nav #check1:checked ~ .topnav {
     right: 0;
   }
@@ -179,32 +191,6 @@ input {
   margin-right: -15px;
 }
 .banner-sec .txt-img .col-8 {
-  width: 66.66%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.banner-sec .txt-img .txt h2 {
-  font-family: "Arial";
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 40px;
-  color: #FF0000;
-}
-.banner-sec .txt-img .txt p {
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
-  color: #414141;
-  margin-top: 40px;
-}
-.banner-sec .txt-img .img-n {
-  width: 100%;
-  height: auto;
-}
-.banner-sec .txt-img .col-4 {
-  width: 33.33%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -212,33 +198,67 @@ input {
   .banner-sec .txt-img .col-8 {
     width: 50%;
   }
-  .banner-sec .txt-img .col-4 {
-    width: 50%;
+}
+@media (max-width: 768px) {
+  .banner-sec .txt-img .col-8 {
+    width: 100%;
   }
+}
+.banner-sec .txt-img .txt h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 40px;
+  color: #FF0000;
+}
+@media (max-width: 992px) {
   .banner-sec .txt-img .txt h2 {
     font-size: 35px;
   }
+}
+.banner-sec .txt-img .txt p {
+  font-size: 20px;
+  line-height: 40px;
+  color: #414141;
+  margin-top: 40px;
+}
+@media (max-width: 992px) {
   .banner-sec .txt-img .txt p {
     font-size: 15px;
     line-height: 30px;
   }
 }
 @media (max-width: 768px) {
-  .banner-sec .txt-img {
-    flex-direction: column-reverse;
-  }
-  .banner-sec .txt-img .col-8 {
-    width: 100%;
-  }
-  .banner-sec .txt-img .col-4 {
-    width: 100%;
-  }
-  .banner-sec .txt-img .col-4 .img-n {
-    margin-bottom: 20px;
-  }
   .banner-sec .txt-img .txt p {
     font-size: 15px;
     line-height: 34px;
+  }
+}
+.banner-sec .txt-img .img-n {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .banner-sec .txt-img .img-n {
+    margin-bottom: 20px;
+  }
+}
+.banner-sec .txt-img .col-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (max-width: 992px) {
+  .banner-sec .txt-img .col-4 {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .banner-sec .txt-img .col-4 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .banner-sec .txt-img {
+    flex-direction: column-reverse;
   }
 }
 @media (max-width: 576px) {
@@ -258,7 +278,6 @@ input {
   margin-top: 100px;
 }
 .card-sec h3 {
-  font-family: "Arial";
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
@@ -268,6 +287,14 @@ input {
 }
 .card-sec .d-flex {
   display: flex;
+}
+@media (max-width: 992px) {
+  .card-sec .d-flex {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .card-sec .col-3 {
   width: 33.3333333333%;
@@ -280,43 +307,21 @@ input {
   border-radius: 20px;
 }
 .card-sec .col-3 .card-in-1 .inner-list {
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 400;
   font-size: 20px;
   line-height: 23px;
   color: #FF0000;
   margin-top: 57px;
 }
 .card-sec .col-3 .card-in-1 .inner-list-1 {
-  font-family: "Arial";
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   color: #414141;
   padding: 20px;
 }
-.card-sec .col-3 .card-in-2 {
-  border: 1px solid #3092F9;
-}
-.card-sec .col-3 .card-in-3 {
-  border: 1px solid #FBA333;
-}
 @media (max-width: 1200px) {
   .card-sec .col-3 .card-in-1 .inner-list-1 {
     font-size: 15px;
-  }
-}
-@media (max-width: 992px) {
-  .card-sec .d-flex {
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .card-sec .col-3 {
-    width: 100%;
   }
 }
 @media (max-width: 320px) {
@@ -324,17 +329,31 @@ input {
     font-size: 12px;
   }
 }
+.card-sec .col-3 .card-in-2 {
+  border: 1px solid #3092F9;
+}
+.card-sec .col-3 .card-in-3 {
+  border: 1px solid #FBA333;
+}
+@media (max-width: 992px) {
+  .card-sec .col-3 {
+    width: 100%;
+  }
+}
 
 /*---------------------------Card-section CSS End --------------------------*/
 /*---------------------------img-txt section CSS Start --------------------------*/
+.img-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .img-content h3 {
-  font-family: "Arial";
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   color: #FF0000;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .img-content .row {
   display: flex;
@@ -346,6 +365,7 @@ input {
 .img-content .row .col-6 img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 .img-content .row .col-6 .img-txt {
   padding: 50px;
@@ -356,7 +376,6 @@ input {
   background: #EAEAEA;
 }
 .img-content .row .col-6 .img-txt h3 {
-  font-family: "Arial";
   font-weight: 700;
   font-size: 32px;
   line-height: 30px;
@@ -364,7 +383,6 @@ input {
   text-align: left;
 }
 .img-content .row .col-6 .img-txt p {
-  font-family: "Arial";
   font-size: 18px;
   line-height: 30px;
   color: #000000;
@@ -376,7 +394,73 @@ input {
   cursor: pointer;
   padding: 10px;
 }
+.img-content .row .col-6 .img-txt .btn button:hover {
+  background: #FFFFFF;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .img-content .row .col-6 .img-txt {
+    padding: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .img-content .row .col-6 .img-txt {
+    padding: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .img-content .row .col-6 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .img-content .row {
+    flex-direction: column-reverse;
+  }
+}
 
 /*---------------------------img-txt section CSS End --------------------------*/
+/*---------------------------footer section CSS start --------------------------*/
+.footer {
+  background: #EAEAEA;
+  padding: 15px;
+}
+.footer .row-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .row-1 .ftr-h {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+@media (max-width: 576px) {
+  .footer .row-1 .ftr-h {
+    font-size: 18px;
+  }
+}
+.footer .row-1 .ftr-p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #1D1D1D;
+}
+@media (max-width: 576px) {
+  .footer .row-1 .ftr-p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .footer .row-1 .ftr-p {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+/*---------------------------footer section CSS end --------------------------*/
 
 /*# sourceMappingURL=main.css.map */

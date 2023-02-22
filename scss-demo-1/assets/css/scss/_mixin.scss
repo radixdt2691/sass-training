@@ -1,150 +1,72 @@
 @use "breakpoints" as b;
 
-// Mixin For header Section
+
+//Mixin for ff
+@mixin ff-li{
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+//Mixin for Padding left-right-15
+@mixin p-l-r-15{    
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+//Mixin for buttons
+@mixin txt-btn{
+    background: #000000;
+    border: 1px solid #CFCFCF;
+    color:white;
+    cursor: pointer;
+    padding: 10px;
+    
+    &:hover{
+        background: #FFFFFF;
+        color: #000000;
+    }
+}
+
+//Responsive
+
+// Mixin For All Section
+@mixin xl {
+    
+    @media (max-width: #{b.$screen-xl-min}) {
+        @content;
+    }
+
+}
 @mixin lg {
     
     @media (max-width: #{b.$screen-lg-min}) {
-      
-        .fa-btn {
-            z-index: 99;
-        }
-        .navbar, .topnav, .nav-link {
-            font-size: 50px;
-        }
-       .navbar-main{
-            .checkbtn1 {
-                display: block;
-                z-index: 99;
-                font-size: larger;
-            }
-        }    
-        
-        .topnav {
-            position: fixed;
-            height: 350px;
-            width: 100%;
-            background-color: rgb(224 228 233 / 73%);
-            top: 0;
-            right: -100%;
-            text-align: center;
-            transition: all .5s;
-            z-index: 99;
+        @content;
+    }
 
-            li{
-                padding: 20px;
-            }
-        }
-        .navbar, .topnav, .link {
-            display: block;
-            margin: 0 auto;
-            color: #292929;
-            z-index: 9;
-            cursor: pointer;
-        }
-       
-        .fa.fa-bars {
-            font-size: 31px;
-            padding: 18px;
-            color: #e84545;
-        }
-        .navbar .topnav, .link {
-            font-size: 20px;
-            color: #292929;
-        }
-        .navbar {
-            transition: .5s;
-        }
-        #check1:checked~.topnav {
-            right: 0;
-        }
-  
+}
+@mixin md {
+    
+    @media (max-width: #{b.$screen-md-min}) {
+        @content;
+    }
+
+}
+@mixin sm {
+    
+    @media (max-width: #{b.$screen-sm-min}) {
+        @content;
+    }
+
+}
+@mixin xsm {
+    
+    @media (max-width: #{b.$screen-xsm-min}) {
+        @content;
     }
 
  }
-
-//Mixin For Banner Section
-@mixin bs {
-    @media (max-width: #{b.$screen-lg-min}) {
-      
-            .txt-img{
-                .col-8{
-                    width: 50%;
-                }
-                .col-4{
-                    width: 50%;
-                }
-                .txt{
-                    h2{
-                        font-size: 35px;
-                    }
-                    p{
-                        font-size: 15px;
-                        line-height: 30px;
-                    }
-                }
-            }
-        
-    }
-
-    @media (max-width: #{b.$screen-md-min}){
-        .txt-img{
-            flex-direction: column-reverse;
-            .col-8{
-                width: 100%;
-            }
-            .col-4{
-                width: 100%;
-                .img-n{
-                    margin-bottom: 20px;
-                }
-            }
-            .txt{
-                p{
-                    font-size: 15px;
-                    line-height: 34px;
-                }
-            }
-        }
-    }
-    @media (max-width: #{b.$screen-sm-min}){
-        padding: 10px;
-    }
-    @media (max-width: #{b.$screen-xsm-min}){
-        padding: unset;
-    }
-}
-
-//Mixin For Card Section
-@mixin cs{
-    @media (max-width: #{b.$screen-xl-min}){
-        .col-3{
-            .card-in-1{
-                .inner-list-1{
-                    font-size: 15px;
-                }
-            }
-        }
-    }
-
-    @media (max-width: #{b.$screen-lg-min}){
-        .d-flex{
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-        .col-3{
-            width: 100%;
-        }
-    }
-
-    @media (max-width: #{b.$screen-xsm-min}){
-        .col-3{
-            .card-in-1{
-                .inner-list-1{
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-}
