@@ -1,0 +1,213 @@
+@use "mixin" as m;
+@use "variable" as v;
+@import "base";
+
+//main scss
+
+//Global Declaration
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.txt-deco{
+    text-decoration: underline;
+}
+.col-2{
+    width: 20%;
+    padding: 7px 0px;
+ }
+
+ .col-8{
+     width: 80%;
+     padding: 7px 0px;
+ }
+ .col-5{
+    width: 50%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-4{
+    width: 33.33%;
+}
+
+/*---------------------------Header CSS Start --------------------------*/
+.main-nav{
+    width: 100%;   
+    .navbar-main{
+        display: v.$d-flex;
+        justify-content: v.$content-center;
+        align-items: v.$content-center;
+
+        #check1 {
+            display: none;
+        }
+        .checkbtn1{
+            display: none;
+            @include m.lg{
+                display: block;
+                z-index: 99;
+                font-size: larger;
+            }
+        }
+
+        .fa-btn{
+            @include m.lg{
+                z-index: 99;
+            }
+        }
+
+        .fa.fa-bars{
+            @include m.lg{
+                font-size: 31px;
+                padding: 18px;
+                color: #e84545;
+            }
+        }
+       
+        @include m.lg{
+            transition: .5s;
+        }
+    }
+    .nav-flex{
+        display: v.$d-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        @include m.lg{
+            position: fixed;
+            height: 350px;
+            width: 100%;
+            background-color: rgb(224 228 233 / 73%);
+            top: 0;
+            right: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 99;
+            display: block;
+            margin: 0 auto; 
+            z-index: 9;
+            cursor: pointer;
+
+        }
+        .active{
+            @extend .txt-deco;
+            color: #FF0000;
+        }
+        li{
+            @include m.lg{
+                padding: 20px;
+            }
+        }
+        li a{
+            @include m.ff-li();
+
+            &:hover{
+                color: red;
+                @extend .txt-deco;
+            }
+           
+        }
+    }
+    
+    .search-input{
+        position: relative;
+    }
+    .plc-src{
+        padding: 10px;
+        border: 1px solid #555555;
+        border-radius: v.$br;
+        font-size: 16px;
+        line-height: 16px;
+        color:#555555;
+        width: 100%;
+    }
+    .icon{
+        position: absolute;
+        right: 20px;
+        bottom: 13px;
+        color: #6C757D;
+    }
+
+    #check1:checked~.topnav {
+        @include m.lg{
+            right: 0;
+        }
+    }
+    //Responsive
+    
+}
+/*---------------------------Header CSS End --------------------------*/
+
+/*---------------------------Table CSS Start --------------------------*/
+.table{
+    margin-top: 96px;
+    margin-bottom: 80px;
+    .txt{
+        display: v.$d-flex;
+        flex-direction: column;
+        justify-content: v.$content-center;
+        align-items: v.$content-center;
+        h2{
+            font-weight: v.$fw-700;
+            font-size: 48px;
+            line-height: 40px;
+            color: #FF0000;
+            margin-bottom: 50px;   
+        }
+        p{
+            font-weight: v.$fw-700;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #414141;
+            margin-bottom: 44px;
+        }
+    }
+
+    .tbl{
+        display: v.$d-flex;
+        justify-content: space-evenly;
+        align-items: v.$content-center;
+        @include m.xl{
+            flex-direction: column;
+        }
+        .tbl-1{
+            @include m.xl{
+                margin-bottom: 20px;
+            }
+            table{
+                width: 600px;
+                height: auto;
+                border-collapse: collapse;
+                .bg{
+                    background:#F5F5F5;
+                }
+                tr{
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 25px;
+                    color: #414141;
+                    text-align: center;
+                    box-shadow: 0px 4px 15px rgba(44, 44, 44, 0.1);
+                    th{
+                        background: #3092F9;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 25px;
+                        color: #FFFFFF;
+                        padding: 8px;
+                    }
+                    td{
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+/*---------------------------Table CSS End --------------------------*/
