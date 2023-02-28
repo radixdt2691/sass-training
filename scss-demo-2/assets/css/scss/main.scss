@@ -26,6 +26,9 @@
  }
  .col-5{
     width: 50%;
+    @include m.sm{
+        width: unset;
+    }
 }
 .col-8{
     width: 66.66%;
@@ -157,6 +160,9 @@
             line-height: 40px;
             color: #FF0000;
             margin-bottom: 50px;   
+            @include m.sm{
+                font-size: 38px;
+            }
         }
         p{
             font-weight: v.$fw-700;
@@ -165,6 +171,9 @@
             text-align: center;
             color: #414141;
             margin-bottom: 44px;
+            @include m.sm{
+                font-size: 17px;
+            }
         }
     }
 
@@ -193,6 +202,12 @@
                     color: #414141;
                     text-align: center;
                     box-shadow: 0px 4px 15px rgba(44, 44, 44, 0.1);
+                    @include m.sm{
+                        font-size: 18px;
+                    }
+                    @include m.xsm{
+                        font-size: 15px;
+                    }
                     th{
                         background: #3092F9;
                         font-weight: 700;
@@ -200,10 +215,27 @@
                         line-height: 25px;
                         color: #FFFFFF;
                         padding: 8px;
+                        @include m.sm{
+                            font-size: 18px;
+                            padding: 7px;
+                        }
+                        @include m.xsm{
+                            font-size: 15px;
+                            padding: 5px;
+                        }
                     }
                     td{
                         padding: 10px;
+                        @include m.sm{
+                            padding: 7px;
+                        }
+                        @include m.xsm{
+                            padding: 5px;
+                        }
                     }
+                }
+                @include m.sm{
+                    width: unset;
                 }
             }
         }
@@ -211,3 +243,256 @@
 
 }
 /*---------------------------Table CSS End --------------------------*/
+
+/*---------------------------text CSS Start --------------------------*/
+.txt{
+    h3{
+        font-weight: v.$fw-700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FF0000;
+        @include m.sm{
+            font-size: 35px;
+        }
+    }
+    .txt-cnt{
+        display: v.$d-flex;
+        justify-content: space-evenly;
+        align-items: v.$content-center;
+        gap: 30px;
+        @include m.sm{
+            flex-direction: column;
+        }
+        p{
+            font-size: 20px;
+            line-height: 40px;
+            margin-top: 50px;
+            text-align: center;
+            color: #414141;
+            @include m.lg{
+                font-size: 18px;
+                line-height: 28px;
+            }
+            @include m.md{
+                font-size: 17px;
+
+            }
+            @include m.sm{
+                font-size: 17px;
+                line-height: 28px;
+            }
+            @include m.xsm{
+                font-size: 15px;
+                line-height: 23px;
+                text-align: justify;
+            }
+        }
+    }
+}
+/*---------------------------text CSS End --------------------------*/
+
+/*---------------------------video CSS End --------------------------*/
+.txt-vid{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    h3{
+        font-weight: v.$fw-700;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FF0000;
+    }
+}
+.vid{
+    background-image: url("/assets/images/Maskgroup.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    .background{
+        .video{
+            width: 70%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        } 
+    }
+}
+/*---------------------------video CSS End --------------------------*/
+
+/*---------------------------audio CSS End --------------------------*/
+.audio{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    .d-flex{
+        display: v.$d-flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: v.$content-center;
+        gap: 40px;
+        h3{
+            font-weight: v.$fw-700;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #FF0000;
+        }
+      
+    }
+   
+}
+/*---------------------------audio CSS End --------------------------*/
+
+/*---------------------------Form CSS Start --------------------------*/
+.form{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    .d-flex{
+        display: v.$d-flex;
+        justify-content: center;
+        align-items: v.$content-center;
+        gap: 40px;
+        .col-1-1{
+            padding: 15px 13px;
+            h3{
+                font-weight: v.$fw-700;
+                font-size: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #FF0000;
+            }
+            .parent{
+                max-width: 100%;
+                
+                height: auto;
+                .form-grp-1,.form-grp-2{
+                    display:inline-block;
+                    text-align: left;   
+                    margin-left: 10px;
+                    padding: 10px;
+                }
+                .form-grp-1-1{
+                    display: inline-block;
+                    text-align: left;
+                    margin-right: 270px;
+                    padding: 10px;
+                }
+                
+                .form-grp-1-1-1{
+                    display: inline-block;
+                    text-align: left;
+                    margin-right: 441px;
+                    padding: 10px;
+                }
+                
+                .form-grp-1-1-1-1{
+                    display: inline-block;
+                    text-align: left;
+                    margin-right: 390px;
+                    padding: 10px;
+                }
+                .frm-main{
+                    margin-top: 49px;background: #F3F3F3;padding-top: 40px;padding-bottom: 30px;border-radius: 5%;
+                }
+                .inside-form{
+                   text-align:left;
+                   margin-left: 15px;
+                   padding: 10px;
+                   @media (max-width: 791px){
+                        text-align: unset;
+                   }
+                }
+                .label-form{
+                    font-family: 'Arial';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #414141;
+                    margin-left: 15px;
+                }
+                .email-label {
+                    margin-left: 0px;
+                }
+                .text-email{
+                    width: 675px;
+                    padding: 12px;
+                    border: 1px solid #CFCFCF;
+                    border-radius: 1px;
+                    margin: 10px;
+                    @media (max-width: 791px){
+                        width: 315px;
+                    }
+                }
+                .text{
+                    width: 315px;
+                    padding: 12px;
+                    border: 1px solid #CFCFCF;
+                    border-radius: 1px;
+                    margin: 10px;
+                }
+                .btn-sub{
+                    font-family:'Arial';font-size:18px;width: 129px;height: 52px;background:#000000;color:white;font-weight:700;margin-right: 10px;margin-top: 20px;
+                    &:hover{
+                        background: #F3F3F3;
+                        color: #000000;
+                    }
+                }      
+                .btn-reset{
+                    font-family:'Arial';font-size:18px;width: 129px;height: 52px;background:white;color:#000000;font-weight:700;
+                    &:hover{
+                        background: #000000;
+                        color: #F5F5F5;
+                    }
+                }
+                input[type=submit],input[type=reset]{
+                    cursor: pointer;
+                    border: 1px solid #CFCFCF;
+                }
+                input[type=color]
+                {     
+                    height: 26px;
+                    width: 71px;
+                    margin: 10px; 
+                    margin-left: 101px; 
+                }
+                input[type=range],input[type=file]{
+                    margin-left: 90px;
+                }
+            }
+        }
+    }
+}
+/*---------------------------Form CSS End --------------------------*/
+
+/*---------------------------Footer CSS start --------------------------*/
+.footer{
+    background-color: #F9F9F9;
+    margin-top: 80px;
+    .d-flex{
+        display: v.$d-flex;
+        justify-content: space-evenly;
+        align-items: v.$content-center;
+        @include m.xl{
+            flex-direction: column;
+            gap:30px;
+        }
+        .ftr-txt{
+            h6{
+                font-size: 20px;font-weight: 700;font-family: Arial;font-style: normal;text-align: center;
+            }
+            p{
+                font-size:18px;font-weight:400;font-family:Arial;font-style:normal;color:#1D1D1D;text-align: center;margin-top: 20px;
+            }
+            .icon-1{
+                display:flex;align-items: center;justify-content: center; gap: 10px;
+                .icn{
+                    background-color: #000000; color: #F3F3F3; padding: 10px; border-radius: 50%;margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+/*---------------------------Footer CSS End --------------------------*/

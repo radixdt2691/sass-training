@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCSS Demo-2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 </head>
 <body>  
@@ -108,5 +109,153 @@
         </div>
     </section>
     <!-- Table Section End -->
+
+    <!-- text section start -->
+    <section class="txt">
+        <div class="container">
+            <h3>Lorem ipsum</h3>
+        <div class="txt-cnt">
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+        </div>
+        </div>
+    </section>
+    <!-- text section end -->
+
+    <section class="txt-vid">
+        <div class="container">
+            <h3>Lorem ipsum</h3>
+        </div>
+    </section>
+    <!-- Video Section Start -->
+    <section class="vid">
+        <div class="container">
+            <div class="background">
+                <video controls="" width="1046" height="424.64" class="video">
+                    <source src="./assets/images/video/mov_bbb.mp4" type="video/mp4">
+                </audio>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section end -->
+
+    <!-- Audio Section start -->
+    <section class="audio">
+        <div class="container">
+           <div class="d-flex">
+                <h3>Lorem ipsum</h3>
+                <audio controls="">
+                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                </audio>
+           </div>
+        </div>
+    </section>
+    <!-- Audio Section end -->
+
+    <!-- Form Section end -->
+    <section class="form">
+        <div class="container">
+            <div class="d-flex">
+                <div class="col-1-1">
+                    <h3>Lorem ipsum</h3>  
+                    <center>    
+                        <div class="parent">
+                            <form class="frm-main">
+                                <div class="form-grp-1">
+                                     <label class="label-form">First Name: </label><br>
+                                     <input type="text" class="text" placeholder="First Name" required>
+                                </div>
+                                <div class="form-grp-2">
+                                     <label class="label-form">Last Name: </label><br>
+                                     <input type="text" class="text" placeholder="Last Name" required>
+                                 </div>
+                                 <div class="inside-form">
+                                     <label class="label-form email-label">Email Id:</label><br>
+                                     <input type="email" class="text-email" placeholder="Email ID" required>
+                                 </div>
+                                 <div class="form-grp-1">
+                                     <label class="label-form">Mobile Number: </label><br>
+                                     <input type="number" class="text" placeholder="Mobile Number" onKeyPress="if(this.value.length==10) return false;"  title="Ten digits code" required>
+                                </div>
+                                <div class="form-grp-2">
+                                     <label class="label-form">Website: </label><br>
+                                     <input type="text" class="text" placeholder="Website" required>
+                                 </div><br>
+                                 <div class="form-grp-1">
+                                     <label class="label-form">Date: </label><br>
+                                     <input type="date" class="text"  min="2023-01-25" max="2023-01-31">
+                                </div>
+                                <div class="form-grp-2">
+                                     <label class="label-form">Date & Time: </label><br>
+                                     <input type="datetime-local" class="text" min="2023-01-25T08:30" max="2023-01-31T16:30" >
+                                 </div><br>
+                                 <div class="form-grp-1">
+                                     <label class="label-form">Select City: </label><br>
+                                     <select class="text" >
+                                         <option selected>City</option>
+                                         <option>Ahmedabad</option>
+                                         <option>Surat</option>
+                                         <option>Baroda</option>
+                                         <option>Rajkot</option>
+                                     </select>
+                                </div>
+                                <div class="form-grp-2">
+                                     <label class="label-form">Gender: </label><br>
+                                     <select class="text" >
+                                         <option>Male</option>
+                                         <option selected>Female</option>
+                                     </select>
+                                 </div><br>
+                                 <div class="form-grp-1-1">
+                                     <label class="label-form">Folder: </label>
+                                     <input type="file" class="file">
+                                </div><br>
+                                <div class="form-grp-1-1-1">
+                                 <label class="label-form">Color: </label>
+                                 <input type="color">
+                                 </div><br>
+                                 <div class="form-grp-1-1-1-1">
+                                     <label class="label-form">Range: </label>
+                                     <input type="range">
+                                     </div><br>
+                                 <div class="form-grp-1">
+                                     <input type="submit" class="btn-sub" value="Submit"> <input type="Reset" class="btn-reset" value="Reset">
+                                 </div>
+                            </form>
+                        </div>
+                       
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form Section end -->
+
+    <!-- Footer Section Start -->
+    <section class="footer">
+        <div class="container">
+            <div class="d-flex">
+                <div>
+                    <iframe class="frame" width="622" height="249" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319">
+                    </iframe>
+                </div>
+                <div class="ftr-txt">
+                    <h6>Radixweb</h6>
+                        <p>Ekyarth, B/H Nirma University, chharodi, Ahmedabad-382481, India.</p>    
+                        <div class="icon-1">
+                            <div class="icn"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="icn"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                            <div class="icn"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
 </body>
 </html>

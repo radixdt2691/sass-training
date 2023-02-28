@@ -62,6 +62,11 @@ table {
 .col-5 {
   width: 50%;
 }
+@media (max-width: 576px) {
+  .col-5 {
+    width: unset;
+  }
+}
 
 .col-8 {
   width: 66.66%;
@@ -196,6 +201,11 @@ table {
   color: #FF0000;
   margin-bottom: 50px;
 }
+@media (max-width: 576px) {
+  .table .txt h2 {
+    font-size: 38px;
+  }
+}
 .table .txt p {
   font-weight: 700;
   font-size: 20px;
@@ -203,6 +213,11 @@ table {
   text-align: center;
   color: #414141;
   margin-bottom: 44px;
+}
+@media (max-width: 576px) {
+  .table .txt p {
+    font-size: 17px;
+  }
 }
 .table .tbl {
   display: flex;
@@ -235,6 +250,16 @@ table {
   text-align: center;
   box-shadow: 0px 4px 15px rgba(44, 44, 44, 0.1);
 }
+@media (max-width: 576px) {
+  .table .tbl .tbl-1 table tr {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .table .tbl .tbl-1 table tr {
+    font-size: 15px;
+  }
+}
 .table .tbl .tbl-1 table tr th {
   background: #3092F9;
   font-weight: 700;
@@ -243,10 +268,331 @@ table {
   color: #FFFFFF;
   padding: 8px;
 }
+@media (max-width: 576px) {
+  .table .tbl .tbl-1 table tr th {
+    font-size: 18px;
+    padding: 7px;
+  }
+}
+@media (max-width: 320px) {
+  .table .tbl .tbl-1 table tr th {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
 .table .tbl .tbl-1 table tr td {
   padding: 10px;
 }
+@media (max-width: 576px) {
+  .table .tbl .tbl-1 table tr td {
+    padding: 7px;
+  }
+}
+@media (max-width: 320px) {
+  .table .tbl .tbl-1 table tr td {
+    padding: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .table .tbl .tbl-1 table {
+    width: unset;
+  }
+}
 
 /*---------------------------Table CSS End --------------------------*/
+/*---------------------------text CSS Start --------------------------*/
+.txt h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FF0000;
+}
+@media (max-width: 576px) {
+  .txt h3 {
+    font-size: 35px;
+  }
+}
+.txt .txt-cnt {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 576px) {
+  .txt .txt-cnt {
+    flex-direction: column;
+  }
+}
+.txt .txt-cnt p {
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 50px;
+  text-align: center;
+  color: #414141;
+}
+@media (max-width: 992px) {
+  .txt .txt-cnt p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .txt .txt-cnt p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 576px) {
+  .txt .txt-cnt p {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 320px) {
+  .txt .txt-cnt p {
+    font-size: 15px;
+    line-height: 23px;
+    text-align: justify;
+  }
+}
+
+/*---------------------------text CSS End --------------------------*/
+/*---------------------------video CSS End --------------------------*/
+.txt-vid {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.txt-vid h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FF0000;
+}
+
+.vid {
+  background-image: url("/assets/images/Maskgroup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.vid .background .video {
+  width: 70%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/*---------------------------video CSS End --------------------------*/
+/*---------------------------audio CSS End --------------------------*/
+.audio {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.audio .d-flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.audio .d-flex h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FF0000;
+}
+
+/*---------------------------audio CSS End --------------------------*/
+/*---------------------------Form CSS Start --------------------------*/
+.form {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.form .d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.form .d-flex .col-1-1 {
+  padding: 15px 13px;
+}
+.form .d-flex .col-1-1 h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FF0000;
+}
+.form .d-flex .col-1-1 .parent {
+  max-width: 100%;
+  height: auto;
+}
+.form .d-flex .col-1-1 .parent .form-grp-1, .form .d-flex .col-1-1 .parent .form-grp-2 {
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+  padding: 10px;
+}
+.form .d-flex .col-1-1 .parent .form-grp-1-1 {
+  display: inline-block;
+  text-align: left;
+  margin-right: 270px;
+  padding: 10px;
+}
+.form .d-flex .col-1-1 .parent .form-grp-1-1-1 {
+  display: inline-block;
+  text-align: left;
+  margin-right: 441px;
+  padding: 10px;
+}
+.form .d-flex .col-1-1 .parent .form-grp-1-1-1-1 {
+  display: inline-block;
+  text-align: left;
+  margin-right: 390px;
+  padding: 10px;
+}
+.form .d-flex .col-1-1 .parent .frm-main {
+  margin-top: 49px;
+  background: #F3F3F3;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-radius: 5%;
+}
+.form .d-flex .col-1-1 .parent .inside-form {
+  text-align: left;
+  margin-left: 15px;
+  padding: 10px;
+}
+@media (max-width: 791px) {
+  .form .d-flex .col-1-1 .parent .inside-form {
+    text-align: unset;
+  }
+}
+.form .d-flex .col-1-1 .parent .label-form {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #414141;
+  margin-left: 15px;
+}
+.form .d-flex .col-1-1 .parent .email-label {
+  margin-left: 0px;
+}
+.form .d-flex .col-1-1 .parent .text-email {
+  width: 675px;
+  padding: 12px;
+  border: 1px solid #CFCFCF;
+  border-radius: 1px;
+  margin: 10px;
+}
+@media (max-width: 791px) {
+  .form .d-flex .col-1-1 .parent .text-email {
+    width: 315px;
+  }
+}
+.form .d-flex .col-1-1 .parent .text {
+  width: 315px;
+  padding: 12px;
+  border: 1px solid #CFCFCF;
+  border-radius: 1px;
+  margin: 10px;
+}
+.form .d-flex .col-1-1 .parent .btn-sub {
+  font-family: "Arial";
+  font-size: 18px;
+  width: 129px;
+  height: 52px;
+  background: #000000;
+  color: white;
+  font-weight: 700;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.form .d-flex .col-1-1 .parent .btn-sub:hover {
+  background: #F3F3F3;
+  color: #000000;
+}
+.form .d-flex .col-1-1 .parent .btn-reset {
+  font-family: "Arial";
+  font-size: 18px;
+  width: 129px;
+  height: 52px;
+  background: white;
+  color: #000000;
+  font-weight: 700;
+}
+.form .d-flex .col-1-1 .parent .btn-reset:hover {
+  background: #000000;
+  color: #F5F5F5;
+}
+.form .d-flex .col-1-1 .parent input[type=submit], .form .d-flex .col-1-1 .parent input[type=reset] {
+  cursor: pointer;
+  border: 1px solid #CFCFCF;
+}
+.form .d-flex .col-1-1 .parent input[type=color] {
+  height: 26px;
+  width: 71px;
+  margin: 10px;
+  margin-left: 101px;
+}
+.form .d-flex .col-1-1 .parent input[type=range], .form .d-flex .col-1-1 .parent input[type=file] {
+  margin-left: 90px;
+}
+
+/*---------------------------Form CSS End --------------------------*/
+/*---------------------------Footer CSS start --------------------------*/
+.footer {
+  background-color: #F9F9F9;
+  margin-top: 80px;
+}
+.footer .d-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .footer .d-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.footer .d-flex .ftr-txt h6 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial;
+  font-style: normal;
+  text-align: center;
+}
+.footer .d-flex .ftr-txt p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Arial;
+  font-style: normal;
+  color: #1D1D1D;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer .d-flex .ftr-txt .icon-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.footer .d-flex .ftr-txt .icon-1 .icn {
+  background-color: #000000;
+  color: #F3F3F3;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+/*---------------------------Footer CSS End --------------------------*/
 
 /*# sourceMappingURL=main.css.map */

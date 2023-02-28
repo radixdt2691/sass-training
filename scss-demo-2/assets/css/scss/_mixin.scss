@@ -17,19 +17,19 @@
     padding-right: 15px;
 }
 
-//Mixin for buttons
-@mixin txt-btn{
-    background: #000000;
-    border: 1px solid #CFCFCF;
-    color:white;
-    cursor: pointer;
-    padding: 10px;
+// //Mixin for buttons
+// @mixin txt-btn{
+//     background: #000000;
+//     border: 1px solid #CFCFCF;
+//     color:white;
+//     cursor: pointer;
+//     padding: 10px;
     
-    &:hover{
-        background: #FFFFFF;
-        color: #000000;
-    }
-}
+//     &:hover{
+//         background: #FFFFFF;
+//         color: #000000;
+//     }
+// }
 
 //Responsive
 
