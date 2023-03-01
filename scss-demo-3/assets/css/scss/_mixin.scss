@@ -1,0 +1,71 @@
+@use "breakpoints" as b;
+
+
+//Mixin for ff
+@mixin ff-li{
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+//Mixin for Padding left-right-15
+@mixin p-l-r-btn{    
+   padding: 18px 32px;
+}
+
+//Mixin for buttons
+@mixin txt-btn{
+    background: #000000;
+    border: 1px solid #CFCFCF;
+    color:white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+    &:hover{
+        background: #FFFFFF;
+        color: #000000;
+    }
+}
+
+//Responsive
+
+// Mixin For All Section
+@mixin xl {
+    
+    @media (max-width: #{b.$screen-xl-min}) {
+        @content;
+    }
+
+}
+@mixin lg {
+    
+    @media (max-width: #{b.$screen-lg-min}) {
+        @content;
+    }
+
+}
+@mixin md {
+    
+    @media (max-width: #{b.$screen-md-min}) {
+        @content;
+    }
+
+}
+@mixin sm {
+    
+    @media (max-width: #{b.$screen-sm-min}) {
+        @content;
+    }
+
+}
+@mixin xsm {
+    
+    @media (max-width: #{b.$screen-xsm-min}) {
+        @content;
+    }
+
+ }

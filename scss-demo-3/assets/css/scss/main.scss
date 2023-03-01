@@ -1,0 +1,164 @@
+@use "mixin" as m;
+@use "variable" as v;
+@use "font" as f;
+@import "base";
+
+//main scss
+
+//Global Declaration
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.txt-deco{
+    text-decoration: underline;
+}
+.col-2{
+    width: 20%;
+ }
+
+ .col-8{
+     width: 80%;
+ }
+ .col-5{
+    width: 50%;
+}
+
+.col-4{
+    width: 33.33%;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/AnyConv.com__Lato-Regular.woff");    
+}
+
+/*---------------------------Header CSS Start --------------------------*/
+.main-nav{
+    width: 100%;   
+    .navbar-main{
+        display: v.$d-flex;
+        justify-content: v.$content-center;
+        align-items: v.$content-center;
+
+        #check1 {
+            display: none;
+        }
+        .checkbtn1{
+            display: none;
+            @include m.lg{
+                display: block;
+                z-index: 99;
+                font-size: larger;
+            }
+        }
+
+        .fa-btn{
+            @include m.lg{
+                z-index: 99;
+            }
+        }
+
+        .fa.fa-bars{
+            @include m.lg{
+                font-size: f.$fs-31;
+                padding: 18px;
+                color: #e84545;
+            }
+        }
+
+        .btn-book{
+            text-align: center;
+            input{
+                @include m.txt-btn();
+                @include m.p-l-r-btn();
+                font-family: "Lato";
+               
+            }
+        }
+       
+        @include m.lg{
+            transition: .5s;
+        }
+    }
+    .nav-flex{
+        display: v.$d-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        @include m.lg{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            background-color: #FFFFFF;
+            // background-color: rgb(224 228 233 / 73%);
+            top: 0;
+            right: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 99;
+            display: block;
+            margin: 0 auto; 
+            z-index: 9;
+            cursor: pointer;
+        }
+        .active{
+            @extend .txt-deco;
+            color: #FF0000;
+        }
+        li{
+            @include m.lg{
+                padding: 20px;
+            }
+        }
+        li a{
+            @include m.ff-li();
+
+            &:hover{
+                color: red;
+                @extend .txt-deco;
+            }
+           
+        }
+    }
+    
+    
+
+    #check1:checked~.topnav {
+        @include m.lg{
+            right: 0;
+        }
+    }
+    //Responsive
+    
+}
+/*---------------------------Header CSS End --------------------------*/
+
+/*---------------------------banner-bg-img CSS Start --------------------------*/
+.bg-img{
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/*---------------------------banner-bg-img CSS End --------------------------*/
+
+.txt{
+    margin-top: 50px;
+    h2{
+        font-weight: f.$fw-700;
+        font-size: f.$fs-52;
+        line-height: 62px;
+        text-align: center;
+        color: #572B39;
+    }
+    p{
+        font-size: f.$fs-20;
+        line-height: 40px;
+        text-align: center;
+        color: #414141;
+    }
+}

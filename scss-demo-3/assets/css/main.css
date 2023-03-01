@@ -1,0 +1,202 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, tt, u, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Arial";
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.txt-deco, .main-nav .nav-flex li a:hover, .main-nav .nav-flex .active {
+  text-decoration: underline;
+}
+
+.col-2 {
+  width: 20%;
+}
+
+.col-8 {
+  width: 80%;
+}
+
+.col-5 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/AnyConv.com__Lato-Regular.woff");
+}
+/*---------------------------Header CSS Start --------------------------*/
+.main-nav {
+  width: 100%;
+}
+.main-nav .navbar-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav .navbar-main #check1 {
+  display: none;
+}
+.main-nav .navbar-main .checkbtn1 {
+  display: none;
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-main .checkbtn1 {
+    display: block;
+    z-index: 99;
+    font-size: larger;
+  }
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-main .fa-btn {
+    z-index: 99;
+  }
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-main .fa.fa-bars {
+    font-size: 31px;
+    padding: 18px;
+    color: #e84545;
+  }
+}
+.main-nav .navbar-main .btn-book {
+  text-align: center;
+}
+.main-nav .navbar-main .btn-book input {
+  background: #000000;
+  border: 1px solid #CFCFCF;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 18px;
+  padding: 18px 32px;
+  font-family: "Lato";
+}
+.main-nav .navbar-main .btn-book input:hover {
+  background: #FFFFFF;
+  color: #000000;
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-main {
+    transition: 0.5s;
+  }
+}
+.main-nav .nav-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+@media (max-width: 992px) {
+  .main-nav .nav-flex {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #FFFFFF;
+    top: 0;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 99;
+    display: block;
+    margin: 0 auto;
+    z-index: 9;
+    cursor: pointer;
+  }
+}
+.main-nav .nav-flex .active {
+  color: #FF0000;
+}
+@media (max-width: 992px) {
+  .main-nav .nav-flex li {
+    padding: 20px;
+  }
+}
+.main-nav .nav-flex li a {
+  list-style: none;
+  text-decoration: none;
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.main-nav .nav-flex li a:hover {
+  color: red;
+}
+@media (max-width: 992px) {
+  .main-nav #check1:checked ~ .topnav {
+    right: 0;
+  }
+}
+
+/*---------------------------Header CSS End --------------------------*/
+/*---------------------------banner-bg-img CSS Start --------------------------*/
+.bg-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*---------------------------banner-bg-img CSS End --------------------------*/
+.txt {
+  margin-top: 50px;
+}
+.txt h2 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 62px;
+  text-align: center;
+  color: #572B39;
+}
+.txt p {
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: #414141;
+}
+
+/*# sourceMappingURL=main.css.map */
