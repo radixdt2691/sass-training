@@ -1,6 +1,8 @@
 @use "mixin" as m;
 @use "variable" as v;
 @use "font" as f;
+@use "sass:math";
+
 @import "base";
 
 //main scss
@@ -16,34 +18,48 @@
 .txt-deco{
     text-decoration: underline;
 }
-.col-2{
-    width: 20%;
- }
+// @for $i from 1 through 12 {
+//     $width: calc(percentage(1 / $i));
+  
+//     .col-#{$i} {
+//       width: $width;
+//     }
+//   }
 
- .col-8{
-     width: 80%;
- }
- .col-5{
-    width: 50%;
+@include m.cols();
+// .col-2{
+//     width: 20%;
+//  }
+// .col-3{
+//     width: calc(100%/3);
+// }
+// .col-8{
+//      width: 80%;
+// }
+//  .col-5{
+//     width: 50%;
+// }
+// .col-4{
+//     width: calc(100%/4);
+// }
+.d-flex{
+    display: v.$d-flex;
+    justify-content: v.$content-center;
+    align-items: v.$content-center;
 }
-
-.col-4{
-    width: 33.33%;
+.flex-col{
+    flex-direction: column;
 }
-
-@font-face {
-    font-family: "Lato";
-    src: url("/assets/fonts/AnyConv.com__Lato-Regular.woff");    
+.flex-wrap{
+    flex-wrap: wrap;
 }
+@include m.font-face('Lato', 'AnyConv.com__Lato-Regular', 'Lato');
 
 /*---------------------------Header CSS Start --------------------------*/
 .main-nav{
     width: 100%;   
     .navbar-main{
-        display: v.$d-flex;
-        justify-content: v.$content-center;
-        align-items: v.$content-center;
-
+        @extend .d-flex;
         #check1 {
             display: none;
         }
@@ -75,8 +91,7 @@
             input{
                 @include m.txt-btn();
                 @include m.p-l-r-btn();
-                font-family: "Lato";
-               
+                font-family: "Lato";  
             }
         }
        
@@ -85,8 +100,7 @@
         }
     }
     .nav-flex{
-        display: v.$d-flex;
-        flex-wrap: wrap;
+        @extend .d-flex;
         justify-content: space-evenly;
         list-style: none;
         @include m.lg{
@@ -146,6 +160,7 @@
 }
 /*---------------------------banner-bg-img CSS End --------------------------*/
 
+/*---------------------------txt section start --------------------------*/
 .txt{
     margin-top: 50px;
     h2{
@@ -154,11 +169,209 @@
         line-height: 62px;
         text-align: center;
         color: #572B39;
+        margin-bottom: 20px;
     }
     p{
         font-size: f.$fs-20;
         line-height: 40px;
         text-align: center;
         color: #414141;
+        margin-bottom: 20px;
+    }
+   
+        text-align: center;
+        input{
+            @include m.txt-btn();
+            @include m.p-l-r-btn();
+            font-family: 'Lato';
+            
+        }
+
+}
+/*---------------------------txt section end --------------------------*/
+
+/*---------------------------img-txt section start --------------------------*/
+.img-txt{
+    margin-top: 80px;
+    
+    .d-flex{
+        background: #FFF4EF;    
+        @extend .d-flex;
+        @include m.lg{
+            flex-direction: column;
+        }
+        .img{
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+       .txt{
+        margin: 0 auto;
+        max-width: 400px;
+        h3{
+            font-size: f.$fs-32;
+            font-weight: f.$fw-700;
+            color: #572B39;
+            text-align: left;
+            margin-bottom: 30px;
+            margin-top: 80px;
+        }
+        p{
+            font-size: f.$fs-20;
+            color: #414141;
+            text-align: left;
+        }
+       }
+    }  
+   
+}
+/*---------------------------img-txt section end --------------------------*/
+
+/*---------------------------img-txt section start --------------------------*/
+.img-text-second{
+    @extend .img-txt;
+}
+/*---------------------------img-txt section end --------------------------*/
+
+/*---------------------------card section start --------------------------*/
+.card-sec{
+    margin-top: 80px;
+    h3{
+        font-size: f.$fs-48;
+        font-weight: f.$fw-700;
+        text-align: center;
+        color: #572B39;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: f.$fs-20;
+        text-align: center;
+        color: #414141;
+        margin-bottom: 32px;
+    }
+    .d-flex{
+        justify-content: space-evenly;
+        @include m.lg{
+            flex-direction: column;
+        }
+        .card{
+            background: #EBDAD7;
+            padding: 40px 69px;
+            margin-bottom: 31px;
+            .icn{
+                margin-bottom: 26px;
+            }
+        }
+       
+    }
+    text-align: center;
+    input{
+        @include m.txt-btn();
+        @include m.p-l-r-btn();
+        font-family: "Lato";  
+    }
+}
+/*---------------------------card section end --------------------------*/
+
+/*---------------------------contact section start --------------------------*/
+.contact{
+    margin-top: 80px;
+    background: #EBDAD7;
+    .d-flex{
+        justify-content: space-evenly;
+        .icon-1{
+            gap: 20px;
+            margin-top: 52px;
+            margin-bottom: 52px;
+            .icon{
+                
+                i{
+                    background-color: #000000; color: #F3F3F3; padding: 21px 20px; border-radius: 50%;margin-top: 30px;font-size: f.$fs-20;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #FFFFFF;
+                        color: #000000;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: #F3F3F3;
+                }
+                
+            }
+            &:hover{
+                cursor: pointer;
+            }
+            p{
+                font-size: 16px;
+                line-height: 28px;
+                /* identical to box height, or 175% */
+                text-align: center;
+
+                color: #414141;
+                a{
+                    text-decoration: none;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    
+}
+/*---------------------------contact section end --------------------------*/
+
+.ftr{
+    background: #FFF4EF;
+    padding: 80px 127px;
+    .d-flex{
+        align-items: unset;
+        justify-content: unset;
+        
+        .col-4{
+            gap: 20px;
+            
+            h3{
+                font-size: f.$fs-22;
+                text-decoration-line: underline;
+                font-weight: f.$fw-700;
+                color: #572B39;
+            }
+            p{
+                font-size: f.$fs-16;
+                letter-spacing: 0.06em;
+                color: #414141;
+            }
+            input{
+                padding: 10px 40px;
+            }
+            .d-flex{
+                gap:unset;
+            }
+            .btn-sub{
+                @include m.txt-btn();
+                border-radius: 0%;
+                font-family: "Lato";
+            }
+        }
+        .col-3{
+            h3{
+                font-size: f.$fs-22;
+                text-decoration-line: underline;
+                font-weight: f.$fw-700;
+                color: #572B39;
+            }
+            ul{
+                
+                justify-content: center;
+                
+                li{
+                    font-size: f.$fs-20;
+                    color: #414141;
+                    padding: 20px;
+                    width: 50%;
+                }
+            }
+        }
     }
 }

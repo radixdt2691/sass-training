@@ -1,5 +1,27 @@
 @use "breakpoints" as b;
+@use "sass:math";
 
+
+
+@mixin font-face($style-name, $file, $family) {
+    $filepath: '../fonts/' + $file;
+   
+    @font-face {
+      font-family: '#{$style-name}';
+      src: url($filepath + '.woff') format('woff');
+    }
+ 
+}
+@mixin cols{
+    @for $i from 1 through 12{
+        $width: calc($i / 12);
+        
+        .col-#{$i} {
+            width: math.percentage($width);     
+        }
+    }
+
+}
 
 //Mixin for ff
 @mixin ff-li{
