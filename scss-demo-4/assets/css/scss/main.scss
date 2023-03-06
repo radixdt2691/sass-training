@@ -2,12 +2,9 @@
 @use "variable" as v;
 @use "font" as f;
 @use "sass:math";
-
 @import "base";
 
-//main scss
-
-//Global Declaration
+//global declaration
 .container{
     max-width: 1320px;
     margin: 0 auto;
@@ -18,31 +15,9 @@
 .txt-deco{
     text-decoration: underline;
 }
-// @for $i from 1 through 12 {
-//     $width: calc(percentage(1 / $i));
-  
-//     .col-#{$i} {
-//       width: $width;
-//     }
-//   }
 
 @include m.cols();
 @include m.list-loop('.p-l-', 'padding-left');
-// .col-2{
-//     width: 20%;
-//  }
-// .col-3{
-//     width: calc(100%/3);
-// }
-// .col-8{
-//      width: 80%;
-// }
-//  .col-5{
-//     width: 50%;
-// }
-// .col-4{
-//     width: calc(100%/4);
-// }
 .d-flex{
     display: v.$d-flex;
     justify-content: v.$content-center;
@@ -60,7 +35,10 @@
 .main-nav{
     width: 100%;   
     .navbar-main{
-        @extend .d-flex;
+        display: v.$d-flex;
+        justify-content: v.$content-center;
+        align-items: v.$content-center;
+
         #check1 {
             display: none;
         }
@@ -81,25 +59,9 @@
 
         .fa.fa-bars{
             @include m.lg{
-                @include m.font-size(f.$fs-31);
+                font-size: 31px;
                 padding: 18px;
                 color: #e84545;
-            }
-        }
-
-        .btn-book{
-            text-align: center;
-            input{
-                @include m.txt-btn();
-                @include m.p-l-r-btn();
-                font-family: "Lato";  
-               
-                @include m.lg{
-                    padding: 15px 20px;
-                }
-                @include m.sm{
-                    padding: 10px 10px;
-                }
             }
         }
        
@@ -108,15 +70,15 @@
         }
     }
     .nav-flex{
-        @extend .d-flex;
+        display: v.$d-flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         list-style: none;
         @include m.lg{
             position: fixed;
-            height: 100vh;
+            height: 350px;
             width: 100%;
-            background-color: #FFFFFF;
-            // background-color: rgb(224 228 233 / 73%);
+            background-color: rgb(224 228 233 / 73%);
             top: 0;
             right: -100%;
             text-align: center;
@@ -126,6 +88,7 @@
             margin: 0 auto; 
             z-index: 9;
             cursor: pointer;
+
         }
         .active{
             @extend .txt-deco;
@@ -147,7 +110,24 @@
         }
     }
     
-    
+    .search-input{
+        position: relative;
+    }
+    .plc-src{
+        padding: 10px;
+        border: 1px solid #555555;
+        border-radius: v.$br;
+        font-size: 16px;
+        line-height: 16px;
+        color:#555555;
+        width: 100%;
+    }
+    .icon{
+        position: absolute;
+        right: 20px;
+        bottom: 13px;
+        color: #6C757D;
+    }
 
     #check1:checked~.topnav {
         @include m.lg{
@@ -161,12 +141,12 @@
 
 /*---------------------------banner-bg-img CSS Start --------------------------*/
 .bg-img{
-  img{
-    width: 100%;
-    object-fit: cover;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
   }
-}
-/*---------------------------banner-bg-img CSS End --------------------------*/
+  /*---------------------------banner-bg-img CSS End --------------------------*/
 
 /*---------------------------txt section start --------------------------*/
 .txt{
@@ -259,6 +239,9 @@
 
 /*---------------------------img-txt section start --------------------------*/
 .img-text-second{
+    .d-flex{
+        background: #BE513B;
+    }
     @extend .img-txt;
 }
 /*---------------------------img-txt section end --------------------------*/
