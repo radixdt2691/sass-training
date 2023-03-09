@@ -1,4 +1,7 @@
 @use "breakpoints" as b;
+@use "function" as f;
+
+
 
 
 //Mixin for ff
@@ -10,6 +13,11 @@
     font-size: 20px;
     line-height: 23px;
     color: #000000;
+}
+
+//Mixin for font-size
+@mixin font-size($size) {
+    font-size: f.calculateRem($size);
 }
 
 //Mixin for Padding left-right-15
@@ -32,6 +40,13 @@
     }
 }
 
+//Mixin for display flex
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
 //Responsive
 
 // Mixin For All Section

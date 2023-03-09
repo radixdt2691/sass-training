@@ -100,7 +100,7 @@ table {
 }
 @media (max-width: 992px) {
   .main-nav .navbar-main .fa.fa-bars {
-    font-size: 31px;
+    font-size: 1.9375rem;
     padding: 18px;
     color: #e84545;
   }
@@ -160,7 +160,7 @@ table {
   padding: 10px;
   border: 1px solid #555555;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 16px;
   color: #555555;
   width: 100%;
@@ -206,30 +206,30 @@ table {
 }
 .banner-sec .txt-img .txt h2 {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 40px;
   color: #FF0000;
 }
 @media (max-width: 992px) {
   .banner-sec .txt-img .txt h2 {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 .banner-sec .txt-img .txt p {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 40px;
   color: #414141;
   margin-top: 40px;
 }
 @media (max-width: 992px) {
   .banner-sec .txt-img .txt p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 30px;
   }
 }
 @media (max-width: 768px) {
   .banner-sec .txt-img .txt p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 34px;
   }
 }
@@ -279,7 +279,7 @@ table {
 }
 .card-sec h3 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 40px;
   text-align: center;
   color: #FF0000;
@@ -307,26 +307,26 @@ table {
   border-radius: 20px;
 }
 .card-sec .col-3 .card-in-1 .inner-list {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 23px;
   color: #FF0000;
   margin-top: 57px;
 }
 .card-sec .col-3 .card-in-1 .inner-list-1 {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 30px;
   color: #414141;
   padding: 20px;
 }
 @media (max-width: 1200px) {
   .card-sec .col-3 .card-in-1 .inner-list-1 {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 @media (max-width: 320px) {
   .card-sec .col-3 .card-in-1 .inner-list-1 {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .card-sec .col-3 .card-in-2 {
@@ -349,7 +349,7 @@ table {
 }
 .img-content h3 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 40px;
   text-align: center;
   color: #FF0000;
@@ -377,13 +377,13 @@ table {
 }
 .img-content .row .col-6 .img-txt h3 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 30px;
   color: #3092F9;
   text-align: left;
 }
 .img-content .row .col-6 .img-txt p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 30px;
   color: #000000;
 }
@@ -427,37 +427,37 @@ table {
 }
 .footer .row-1 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .footer .row-1 .ftr-h {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 30px;
   text-align: center;
   color: #000000;
 }
 @media (max-width: 576px) {
   .footer .row-1 .ftr-h {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .footer .row-1 .ftr-p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 30px;
   color: #1D1D1D;
 }
 @media (max-width: 576px) {
   .footer .row-1 .ftr-p {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
   }
 }
 @media (max-width: 320px) {
   .footer .row-1 .ftr-p {
     text-align: center;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
