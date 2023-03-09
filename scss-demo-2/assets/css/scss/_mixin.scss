@@ -1,5 +1,5 @@
 @use "breakpoint" as b;
-
+@use "sass:math";
 //Mixin for ff
 @mixin ff-li{
     list-style: none;
@@ -9,6 +9,18 @@
     font-size: 20px;
     line-height: 23px;
     color: #000000;
+}
+
+//Mixin for columns width
+@mixin cols{
+    @for $i from 1 through 12{
+        $width: calc($i / 12);
+        
+        .col-#{$i} {
+            width: math.percentage($width);     
+        }
+    }
+
 }
 
 //Mixin for Padding left-right-15
